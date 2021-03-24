@@ -37,7 +37,7 @@ def extract_data(html):
         inn = inn.strip()
         kpp = html.find_all('div', class_='registry-entry__body-value')[1].text
         kpp = kpp.strip()
-        ogrn = html.find_all('div', {'class': 'registry-entry__body-value'})[2].text
+        ogrn = html.find_all('div', class_='registry-entry__body-value')[2].text
         ogrn = ogrn.strip()
         for url in urls:
             result = requests.get(url, headers={'User-Agent': UserAgent().chrome})
