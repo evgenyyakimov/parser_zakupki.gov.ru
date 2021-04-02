@@ -54,8 +54,8 @@ def extract_data(html):
             e_dol.append(dol)
             dinn = soup.find_all('div', class_='row')[7].find_all('td', class_='tableBlock__col')[2].text
             d_inn.append(dinn)
-    except:
-        pass
+    except IOError:
+        print('Error')
     return {
             'title': title, 'number': number, 'inn': inn, 'kpp': kpp, 
             'link': 'zakupki.gov.ru' + link, 'telefon': ''.join(telefon), 
