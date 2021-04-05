@@ -56,6 +56,7 @@ def extract_data(html):
             d_inn.append(dinn)
     except IOError:
         print('Error')
+        continue
     return {
             'title': title, 'number': number, 'inn': inn, 'kpp': kpp, 
             'link': 'zakupki.gov.ru' + link, 'telefon': ''.join(telefon), 
